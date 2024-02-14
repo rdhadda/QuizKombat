@@ -1,0 +1,93 @@
+/* ***************************************************************************CSS Code for Home Page */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/brickwall.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.container a {
+  margin-bottom: 10px;
+}
+
+.panel {
+  text-align: center;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.expanded {
+  max-height: 220px;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: "Yellowtail", sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+p {
+  font-family: "Yellowtail", sans-serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+}
+
+.accordion {
+  margin-top: 10px;
+}
+
+/* Code used from css-tricks.com */
+
+.neon-button {
+  cursor: pointer;
+  background: none;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.neon-text-blue {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #5271ff,
+    0 0 82px #5271ff, 0 0 92px #5271ff, 0 0 102px #5271ff, 0 0 151px #5271ff;
+}
+
+.neon-text-pink {
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-family: "Sacramento", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
+    0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #5271ff,
+    0 0 0.8rem #5271ff, 0 0 2.8rem #5271ff, inset 0 0 1.3rem #5271ff;
+}
