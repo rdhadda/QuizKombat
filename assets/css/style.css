@@ -1,3 +1,19 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../images/brickwall.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* ***************************************************************************CSS Code for Home Page */
 
 .container {
@@ -6,10 +22,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/brickwall.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container > * {
+  width: 100%;
 }
 
 .flex-column {
@@ -47,7 +66,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-p {
+.panel p {
   font-family: "Yellowtail", sans-serif;
   letter-spacing: 2px;
   font-size: 30px;
@@ -62,6 +81,7 @@ p {
 /* Code used from css-tricks.com */
 
 .neon-button {
+  margin-top: 2rem;
   cursor: pointer;
   background: none;
   border: 0.2rem solid #fff;
@@ -79,7 +99,7 @@ p {
 
 .neon-text-pink {
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   font-weight: 400;
   font-family: "Sacramento", sans-serif;
   color: #fff;
@@ -88,6 +108,43 @@ p {
 }
 
 .neon-button:hover {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #5271ff,
+    0 0 0.8rem #5271ff, 0 0 2.8rem #5271ff, inset 0 0 1.3rem #5271ff;
+}
+
+/* ****************************************************************************Game.html CSS */
+
+h2 {
+  color: #fff;
+  font-size: 80px;
+  font-family: "Yellowtail", sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.2rem solid rgb(188, 19, 254);
+}
+
+.choice-prefix {
+  color: #fff;
+  margin: 0;
+  padding: 1.5rem 2.5rem;
+  background-color: #bc13fe;
+}
+
+.choice-text {
+  color: #fff;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.choice-container:hover {
+  cursor: pointer;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #5271ff,
     0 0 0.8rem #5271ff, 0 0 2.8rem #5271ff, inset 0 0 1.3rem #5271ff;
 }
