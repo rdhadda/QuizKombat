@@ -38,7 +38,7 @@ let questions = [
 function startGame() {
   questionCounter = 0;
   score = 0;
-  // availableQuestions variable uses the spread operator to create a new array of the questions array.
+  // availableQuestions variable uses the spread operator to create a new array of the questions array at the start of every game.
   availableQuestions = [...questions];
   newQuestion();
 }
@@ -53,6 +53,7 @@ function newQuestion() {
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
+  // for loop to iterate through each choice and assign the currentQuestion choice index.
   answers.forEach((answerElement, index) => {
     answerElement.innerText = currentQuestion[`choice${index + 1}`];
   });
