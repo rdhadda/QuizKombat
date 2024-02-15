@@ -13,7 +13,7 @@ let questions = [
     choice2: "Mars",
     choice3: "Jupiter",
     choice4: "Saturn",
-    answer: 3,
+    answer: "Jupiter",
   },
   {
     question: "What is the capital of France?",
@@ -21,7 +21,7 @@ let questions = [
     choice2: "Madrid",
     choice3: "Paris",
     choice4: "Rome",
-    answer: 3,
+    answer: "Paris",
   },
   {
     question:
@@ -30,7 +30,7 @@ let questions = [
     choice2: "margin",
     choice3: "padding",
     choice4: "letter-spacing",
-    answer: 4,
+    answer: "letter-spacing",
   },
 ];
 
@@ -68,8 +68,18 @@ for (let i = 0; i < answers.length; i++) {
     if (!acceptingAnswers) return;
     // acceptingAnswers it set to false, if the player tries to click on another answer the code will exit.
     acceptingAnswers = false;
-    const selectedAnswer = answers[i];
-    newQuestion();
+    const selectedAnswer = answers[i].innerText;
+    if (selectedAnswer === currentQuestion.answer) {
+      answers[i].parentElement.classList.add("correct");
+    } else {
+      answers[i].parentElement.classList.add("incorrect");
+    }
+
+    setTimeout(() => {
+      answers[i].parentElement.classList.remove("correct");
+      answers[i].parentElement.classList.remove("incorrect");
+      newQuestion();
+    }, 1500);
   });
 }
 
