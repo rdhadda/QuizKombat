@@ -154,3 +154,37 @@ h2 {
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #5271ff,
     0 0 0.8rem #5271ff, 0 0 2.8rem #5271ff, inset 0 0 1.3rem #5271ff;
 }
+
+.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.incorrect {
+  background-color: #ff5733;
+  color: white;
+}
+
+.answer-outcome {
+  color: #fff;
+  margin: 0;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.correct-icon {
+  display: none;
+}
+
+.correct .correct-icon {
+  display: block;
+}
+
+.incorrect-icon {
+  display: none;
+  font-size: 30px;
+}
+
+.incorrect .incorrect-icon {
+  display: block;
+}
