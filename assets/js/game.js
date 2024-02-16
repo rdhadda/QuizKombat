@@ -69,15 +69,28 @@ for (let i = 0; i < answers.length; i++) {
     // acceptingAnswers it set to false, if the player tries to click on another answer the code will exit.
     acceptingAnswers = false;
     const selectedAnswer = answers[i].innerText;
+    // Logic to determine whether the player has selected the correct answer and apply appropriate classes.
     if (selectedAnswer === currentQuestion.answer) {
       answers[i].parentElement.classList.add("correct");
+      answers[i].nextElementSibling.classList.add("correct-icon");
     } else {
       answers[i].parentElement.classList.add("incorrect");
+      answers[i].nextElementSibling.classList.add("incorrect-icon");
+      for (let j = 0; j < answers.length; j++) {
+        if (answers[j].innerText === currentQuestion.answer) {
+          answers[j].parentElement.classList.add("correct");
+        }
+      }
     }
-
+    // setTimeout function to remove classes once they have been applied.
     setTimeout(() => {
       answers[i].parentElement.classList.remove("correct");
       answers[i].parentElement.classList.remove("incorrect");
+      for (let j = 0; j < answers.length; j++) {
+        if (answers[j].innerText === currentQuestion.answer) {
+          answers[j].parentElement.classList.remove("correct");
+        }
+      }
       newQuestion();
     }, 1500);
   });
