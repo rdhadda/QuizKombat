@@ -1,5 +1,6 @@
 const question = document.getElementById("question");
 const answers = [...document.getElementsByClassName("choice-text")];
+const questionCount = document.getElementById("questionCount");
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -50,6 +51,7 @@ function newQuestion() {
     return location.assign("/end.html");
   }
   questionCounter++;
+  questionCount.innerText = `${questionCounter}`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -73,6 +75,7 @@ for (let i = 0; i < answers.length; i++) {
     if (selectedAnswer === currentQuestion.answer) {
       answers[i].parentElement.classList.add("correct");
       answers[i].nextElementSibling.classList.add("correct-icon");
+      incrementScore();
     } else {
       answers[i].parentElement.classList.add("incorrect");
       answers[i].nextElementSibling.classList.add("incorrect-icon");
@@ -94,6 +97,10 @@ for (let i = 0; i < answers.length; i++) {
       newQuestion();
     }, 1500);
   });
+}
+
+function incrementScore() {
+  score++;
 }
 
 startGame();
