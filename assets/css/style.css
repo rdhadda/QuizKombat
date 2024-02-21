@@ -43,7 +43,7 @@ body {
 
 .text-align {
   text-align: center;
-  padding-bottom: 120px;
+  padding-bottom: 50px;
 }
 
 .container a {
@@ -187,4 +187,14 @@ h2 {
 
 .incorrect .incorrect-icon {
   display: block;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 2rem;
 }
