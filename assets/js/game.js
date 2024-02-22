@@ -1,6 +1,7 @@
 const question = document.getElementById("question");
 const answers = [...document.getElementsByClassName("choice-text")];
-const questionCount = document.getElementById("questionCount");
+const questionCount = [...document.getElementsByClassName("box")];
+
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -51,7 +52,9 @@ function newQuestion() {
     return location.assign("/end.html");
   }
   questionCounter++;
-  questionCount.innerText = `${questionCounter}`;
+  setTimeout(() => {
+    questionCount[questionCounter - 1].classList.add("progress-counter");
+  }, 500);
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
