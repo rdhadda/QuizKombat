@@ -38,6 +38,8 @@ let questions = [
 
 // the startGame function sets the questionCounter and score to 0.
 function startGame() {
+  // Removes the previous stored core from local storage
+  localStorage.removeItem("score");
   questionCounter = 0;
   score = 0;
   // availableQuestions variable uses the spread operator to create a new array of the questions array at the start of every game.
@@ -78,7 +80,9 @@ for (let i = 0; i < answers.length; i++) {
     if (selectedAnswer === currentQuestion.answer) {
       answers[i].parentElement.classList.add("correct");
       answers[i].nextElementSibling.classList.add("correct-icon");
-      incrementScore();
+      score++;
+      //Stores the score in local storage to allow end.html to access and show the final score.
+      localStorage.setItem("score", score);
     } else {
       answers[i].parentElement.classList.add("incorrect");
       answers[i].nextElementSibling.classList.add("incorrect-icon");
@@ -100,10 +104,6 @@ for (let i = 0; i < answers.length; i++) {
       newQuestion();
     }, 1500);
   });
-}
-
-function incrementScore() {
-  score++;
 }
 
 startGame();
