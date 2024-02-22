@@ -214,3 +214,11 @@ h2 {
 .progress-counter {
   background-color: #bc13fe;
 }
+
+/* *************************************************************************End.hmtl styling */
+
+.final-score {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
