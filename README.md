@@ -119,13 +119,13 @@ The website consists of three pages. A home page, a games page and a scores page
 #### Games Page
 
 - The website title QuizKombat.
+- A progress bar to indicate to the player which question their on.
 - A question and four answer choices. Upon selecting the correct answer the answer will be highlighted green and their score will be incremented, if the incorrect answer is selected the choice will be highlighted red and the correct answer will be highlighted green.
 
 #### Scores Page
 
 - Once the player has answered 10 questions they will be taken through to the scores page will display their final score.
 - A button to replay the game.
-- An exit button directing the player back to the home page.
 
 #### 404 Error Page
 
