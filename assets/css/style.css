@@ -9,10 +9,9 @@
 }
 
 body {
-  background-image: url(../images/brickwall.png);
+  background-image: url(../images/brickwall2.webp);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 /* ***************************************************************************CSS Code for Home Page */
 
@@ -23,8 +22,9 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 80rem;
+  min-width: 40%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2%;
 }
 
 .container > * {
@@ -39,11 +39,6 @@ body {
 .flex-center {
   justify-content: center;
   align-items: center;
-}
-
-.text-align {
-  text-align: center;
-  padding-bottom: 50px;
 }
 
 .container a {
@@ -64,15 +59,8 @@ body {
   max-height: 220px;
 }
 
-h1 {
-  font-size: 80px;
-  font-family: "Yellowtail", sans-serif;
-  font-weight: 400;
-  letter-spacing: 5px;
-}
-
 .panel p {
-  font-family: "Yellowtail", sans-serif;
+  font-family: "Anta", sans-serif;
   letter-spacing: 2px;
   font-size: 30px;
   color: white;
@@ -97,6 +85,10 @@ h1 {
 }
 
 .neon-text-blue {
+  font-size: 8rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  font-family: "Yellowtail", sans-serif;
   text-decoration: none;
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #5271ff,
@@ -107,7 +99,7 @@ h1 {
   text-decoration: none;
   font-size: 3.2rem;
   font-weight: 400;
-  font-family: "Sacramento", sans-serif;
+  font-family: "Anta", sans-serif;
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
     0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
@@ -122,13 +114,14 @@ h1 {
 
 h2 {
   color: #fff;
-  font-size: 50px;
-  font-family: "Yellowtail", sans-serif;
+  font-size: 5rem;
+  font-family: "Anta", sans-serif;
   font-weight: 400;
   letter-spacing: 5px;
 }
 
 .choice-container {
+  font-family: "Anta", sans-serif;
   display: flex;
   margin-bottom: 0.5rem;
   width: 100%;
@@ -194,6 +187,7 @@ h2 {
 }
 
 .stats-container {
+  font-family: "Anta", sans-serif;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -202,7 +196,8 @@ h2 {
   padding: 2rem;
   color: #fff;
   font-size: 2rem;
-  max-width: 80rem;
+  max-width: 80%;
+  min-width: 40%;
   margin: 0 auto;
 }
 
@@ -223,4 +218,38 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.final-score p {
+  font-family: "Anta", sans-serif;
+}
+
+.container-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.container-404 .neon-button {
+  width: 25rem;
+  height: 10rem;
+  font-size: 3rem;
+  padding: 2rem 2rem;
+}
+
+/* ****************************************************************************Media Queries */
+
+@media screen and (max-width: 425px) {
+  :root {
+    font-size: 42.5%;
+  }
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .panel p {
+    font-size: 2rem;
+  }
 }
