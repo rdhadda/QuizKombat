@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Yellowtail:400"
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Sacramento:400"
+      href="https://fonts.googleapis.com/css?family=Yellowtail:400"
       rel="stylesheet"
       type="text/css"
     />
@@ -18,27 +19,20 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       type="text/css"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>QuizKombat</title>
   </head>
   <body>
     <div class="container">
-      <div id="game" class="flex-column">
-        <div class="text-align">
-          <a href="index.html" class="neon-text-blue"><h1>QuizKombat</h1></a>
-        </div>
+      <div class="flex-center flex-column">
+        <a href="index.html" class="neon-text-blue">QuizKombat</a>
         <div class="final-score">
-            <p class="neon-text-pink" id="final-score-text">
-                Congratulations you Scored:
-            </p>
-            <p class="neon-text-pink" id="final-score-number">
-                
-            </p>
-            <a class="neon-button neon-text-pink" href="game.html">Play Again</a>
+          <p class="neon-text-pink" id="final-score-text"></p>
+          <p class="neon-text-pink" id="final-score-number"></p>
+          <a class="neon-button neon-text-pink" href="game.html">Play Again</a>
         </div>
-       
+      </div>
     </div>
+    <script src="assets/js/end.js"></script>
   </body>
-  <script type="text/javascript" src="assets/js/end.js"></script>
 </html>
