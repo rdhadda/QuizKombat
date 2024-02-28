@@ -1,7 +1,6 @@
 const question = document.getElementById("question");
 const answers = [...document.getElementsByClassName("choice-text")];
 const questionCount = [...document.getElementsByClassName("box")];
-
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -271,7 +270,7 @@ let questions = [
 
 // the startGame function sets the questionCounter and score to 0.
 function startGame() {
-  // Removes the previous stored core from local storage
+  // Removes the previous stored score from local storage
   localStorage.removeItem("score");
   questionCounter = 0;
   score = 0;
@@ -306,7 +305,7 @@ function newQuestion() {
 for (let i = 0; i < answers.length; i++) {
   answers[i].addEventListener("click", () => {
     if (!acceptingAnswers) return;
-    // acceptingAnswers it set to false, if the player tries to click on another answer the code will exit.
+    // acceptingAnswers is set to false, if the player tries to click on another answer the code will exit.
     acceptingAnswers = false;
     const selectedAnswer = answers[i].innerText;
     // Logic to determine whether the player has selected the correct answer and apply appropriate classes.
@@ -316,7 +315,6 @@ for (let i = 0; i < answers.length; i++) {
       score++;
       //Stores the score in local storage to allow end.html to access and show the final score.
       localStorage.setItem("score", score);
-      console.log(score);
     } else {
       answers[i].parentElement.classList.add("incorrect");
       answers[i].nextElementSibling.classList.add("incorrect-icon");
