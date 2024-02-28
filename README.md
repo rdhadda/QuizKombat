@@ -227,6 +227,8 @@ To clone the QuizKombat repository:
 
 Testing was continuous throughout the website build. I used Chrome developer tools to identify and address any issues as they arose.
 
+## Automated Testing
+
 ### W3C Validator
 
 W3C validator was used to validate the HTML on all pages of the website. It was also used to validate CSS in the style.css file.
@@ -236,6 +238,14 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 - [Score Page HTML](docs/w3-end.png)
 - [404 Page HTML](docs/w3-404.png)
 - [style.css CSS](docs/w3-css.png)
+
+### JavaScript Validator
+
+[jshint](https://jshint.com/) was used to validate the JavaScript.
+
+- [script.js](documentation/jshint-script.js.png)
+- [game.js](documentation/jshint-game.js.png)
+- [end.js](documentation/jshint-end.js.png) - Passed.
 
 ### Solved Bugs
 
