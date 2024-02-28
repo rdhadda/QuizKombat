@@ -41,6 +41,7 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 - [Testing](#Testing)
   - [W3C Validator](#W3C-Validator)
   - [Solved Bugs](#Solved-Bugs)
+  - [Known Bugs](#Known-Bugs)
   - [Testing User Stories](#Testing-User-Stories)
   - [Lighthouse Testing](#Lighthouse-Testing)
   - [Wave Testing](#Wave-Testing)
@@ -60,7 +61,7 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 - I want to be able to play quiz online
 - I want to be able to navigate through the website with ease.
-- I want the website to be responive across varying devices.
+- I want the website to be responsive across varying devices.
 
 #### Returning Visitor Goals
 
@@ -74,17 +75,18 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 ### Colour Scheme
 
-![QuizKombat](docs/colourscheme.png)
+![QuizKombat](documentation/colour-scheme.png)
 
-I opted for a clean modern colour pallete where each colour compliments one another. The colour pallete was created using the [coolors](https://coolors.co/) website.
+I opted for an arcade style theme with neon light effects. The colour pallete was created using the [coolors](https://coolors.co/) website.
 
 ### Typography
 
 Google Fonts was used for the following fonts:
 
-- Roboto is used across the site for all text on the site. It is a sans-serif font.
+- Yellowtail is used for the main QuizKombat logo.
+- Anta is used for the progress bar, questions, different answer choices and buttons.
 
-![Roboto Google Fonts](docs/roboto-text.png)
+![Typography](documentation/font-choice.png)
 
 ### Imagery
 
@@ -102,13 +104,11 @@ Wireframes were created for mobile, tablet and desktop using Balsamiq.
 
 ### Features
 
-The website consists of three pages. A home page, a games page and a scores page.
+The website consists of four pages. A home page, games page, score page and 404 page.
 
-#### All three pages have the following elements in common:
+#### All four pages have the following elements in common:
 
 - The title of the webpage QuizKombat. The title also acts as a link back to the homepage.
-
-- A footer that comprises of social media links to Facebook, Instagram, Twitter and Youtube.
 
 #### Home Page
 
@@ -116,22 +116,30 @@ The website consists of three pages. A home page, a games page and a scores page
 - An accordian with playing instructions that explains how to play the game.
 - A button that says "start game," enabling the player to begin playing.
 
+![Home Page](documentation/homepage.png)
+
 #### Games Page
 
 - The website title QuizKombat.
-- A progress bar to indicate to the player which question their on.
+- A progress bar to indicate to the player which question they're on.
 - A question and four answer choices. Upon selecting the correct answer the answer will be highlighted green and their score will be incremented, if the incorrect answer is selected the choice will be highlighted red and the correct answer will be highlighted green.
+
+![Home Page](documentation/gamepage.png)
 
 #### Scores Page
 
 - Once the player has answered 10 questions they will be taken through to the scores page will display their final score.
 - A button to replay the game.
 
+![Score Page](documentation/scorepage.png)
+
 #### 404 Error Page
 
 - The website title QuizKombat
 - An error message.
 - A button directing the player back to the homepage.
+
+![Score Page](documentation/404page.png)
 
 #### Future Implementations
 
@@ -146,6 +154,7 @@ I've taken care when coding to make the website as player-friendly and as access
 - Using descriptive alt attributes for images throughout the site.
 - Selecting a sans-serif font which is suitable for users with dyslexia.
 - Ensuring that the site has an adequate amount of colour contrast.
+- Displaying symbols for correct/incorrect answers.
 
 ## Technologies Used
 
@@ -167,13 +176,11 @@ I've taken care when coding to make the website as player-friendly and as access
 
 Google Dev Tools - To troubleshoot and test features, and solve issues with responsiveness and styling.
 
-[jQuery](https://jquery.com/) A javascript library.
-
 [Birme](https://www.birme.net/) To resize images and change to webp format.
 
 [Am I Responsive](https://ui.dev/amiresponsive) To show the website across a range of devices.
 
-[Fontawsome](https://fontawesome.com/start) For social links.
+[Fontawsome](https://fontawesome.com/start) For the cross and tick.
 
 [Unsplash](https://unsplash.com/) For all images.
 
@@ -224,11 +231,11 @@ Testing was continuous throughout the website build. I used Chrome developer too
 
 W3C validator was used to validate the HTML on all pages of the website. It was also used to validate CSS in the style.css file.
 
-- [Index Page HTML](docs/w3-index.html.png)
-- [Packages Page HTML](docs/w3-packages.html.png)
-- [Gallery Page HTML](docs/w3-gallery.html.png)
-- [404 Page HTML](docs/w3-404.html.png)
-- [style.css CSS](docs/w3-style.css.png)
+- [Index Page HTML](docs/w3-index.png)
+- [Game Page HTML](docs/w3-game.png)
+- [Score Page HTML](docs/w3-end.png)
+- [404 Page HTML](docs/w3-404.png)
+- [style.css CSS](docs/w3-css.png)
 
 ### Solved Bugs
 
