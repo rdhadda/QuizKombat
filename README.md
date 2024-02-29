@@ -59,7 +59,7 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 #### First Time Visitor Goals
 
-- I want to be able to play quiz online
+- I want to be able to play quiz online.
 - I want to be able to navigate through the website with ease.
 - I want the website to be responsive across varying devices.
 
@@ -90,7 +90,7 @@ Google Fonts was used for the following fonts:
 
 ### Imagery
 
-All images on the webpage were taken from unsplash.com. I have credited these in the [credits](#credits) section.
+All images on the webpage were taken from Pixabay. I have credited these in the [credits](#credits) section.
 
 ### Wireframes
 
@@ -176,15 +176,13 @@ I've taken care when coding to make the website as player-friendly and as access
 
 Google Dev Tools - To troubleshoot and test features, and solve issues with responsiveness and styling.
 
-[Birme](https://www.birme.net/) To resize images and change to webp format.
-
 [Am I Responsive](https://ui.dev/amiresponsive) To show the website across a range of devices.
 
 [Fontawsome](https://fontawesome.com/start) For the cross and tick.
 
-[Unsplash](https://unsplash.com/) For all images.
+[Pixabay](https://pixabay.com/illustrations/wall-masonry-facade-black-wall-2059909/) For the background image.
 
-[Squoosh](https://squoosh.app/) Compress images.
+[Squoosh](https://squoosh.app/) Compress images and convert to webp format.
 
 [Sheilds](https://shields.io/) Add badges to README.
 
@@ -245,7 +243,7 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 - [script.js](documentation/jshint-script.js.png)
 - [game.js](documentation/jshint-game.js.png)
-- [end.js](documentation/jshint-end.js.png) - Passed.
+- [end.js](documentation/jshint-end.js.png)
 
 ### Solved Bugs
 
@@ -263,9 +261,17 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 #### First Time Visitors
 
--
+| Goals                                                        | How are they achieved?                                                                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
+| I want to be able to play quiz online.                       | QuizKombat is a web-based quiz, which accessible across desktop, tablet and mobile devices.                                    |
+| I want to be able to navigate through the website with ease. | The website uses a series of buttons to allow the player to easily navigate the website. ![buttons](documentation/buttons.png) |
+| I want the website to be responsive across varying devices.  | Media queries have been used in order to make QuizKombat responsive.                                                           |
 
 #### Returning Visitors and Frequent Visitors
+
+| Goals                                                    | How are they achieved?                                                                     |
+| :------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+| I want a variety of questions across different subjects. | There are a variety of questions which are randomly selected each time the game is played. |
 
 ### Lighthouse Testing
 
@@ -273,37 +279,37 @@ I took the opportunity to utilize Lighthouse within Chrome Developer Tools. This
 
 #### Index.html Desktop Page
 
-![Lighthouse index.html Desktop](docs/lighthouse-index-desktop.png)
+![Lighthouse index.html Desktop](documentation/lighthouse-index.html.png)
 
 #### Game.html Desktop Page
 
-![Lighthouse packages.html Desktop](docs/lighthouse-packages-desktop.png)
+![Lighthouse game.html Desktop](documentation/lighthouse-game.html.png)
 
-#### Scores.html Desktop Page
+#### End.html Desktop Page
 
-![Lighthouse gallery.html Desktop](docs/lighthouse-gallery-desktop.png)
+![Lighthouse end.html Desktop](documentation/lighthouse-end.html.png)
 
 #### 404.html Desktop Page
 
-![Lighthouse 404.html Desktop](docs/lighthouse-404-desktop.png)
+![Lighthouse 404.html Desktop](documentation/lighthouse-404.html.png)
 
 ### Mobile Testing
 
 #### Index.html Page
 
-![Lighthouse index.html Mobile](docs/lighthouse-index-mobile.png)
+![Lighthouse index.html Mobile](documentation/lighthouse-mobile-index.html.png)
 
-#### Packages.html Page
+#### Game.html Page
 
-![Lighthouse packages.html Mobile](docs/lighthouse-packages-mobile.png)
+![Lighthouse game.html Mobile](documentation/lighthouse-mobile-game.html.png)
 
-#### Gallery.html Page
+#### End.html Page
 
-![Lighthouse gallery.html Mobile](docs/lighthouse-gallery-mobile.png)
+![Lighthouse end.html Mobile](documentation/lighthouse-mobile-end.html.png)
 
 #### 404.html Page
 
-![Lighthouse 404.html Mobile](docs/lighthouse-404-mobile.png)
+![Lighthouse 404.html Mobile](documentation/lighthouse-mobile-404.html.png)
 
 ### Wave Testing
 
@@ -332,16 +338,60 @@ Each device tested the site using the following browsers:
 
 #### Home Page
 
+| Feature                    | Expected Outcome                                                       | Testing Performed                  | Result                                                      | Pass/Fail |
+| -------------------------- | ---------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------- | --------- |
+| The Sites title            | Link directs the user back to the home page                            | Clicked title                      | Home page reloads                                           | Pass      |
+| Start Game                 | Directs the user to the game page                                      | Clicked on button                  | Game page opens to display the questions                    | Pass      |
+| How to play button         | Opens the accordion with the instructions on how to play the game      | Clicked on button                  | accordion with instructions on how to play opens            | Pass      |
+| All buttons - hover effect | All purple buttons should highlight with a blue neon effect background | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass      |
+
 #### Game Page
+
+| Feature                    | Expected Outcome                                                                                                                                | Testing Performed                  | Result                                                                                                   | Pass/Fail |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------- | --------- |
+| The Sites title            | Link directs the user back to the home page                                                                                                     | Clicked title                      | Home page reloads                                                                                        | Pass      |
+| All buttons - hover effect | All purple buttons should highlight with a blue neon effect background                                                                          | Hover over each button on the page | Each button displayed the correct styling when hovered over                                              | Pass      |
+| Question populated         | The question from available questions array is correctly pulled from game.js                                                                    | started a new game                 | The question is displaying                                                                               | Pass      |
+| Answers populated          | The answers from available questions array is correctly pulled from game.js                                                                     | started a new game                 | The question is displaying                                                                               | Pass      |
+| Correct answer             | When a correct answer is clicked the box around the answer should display green with a tick                                                     | Clicked on a correct answer        | box displayed green with a tick                                                                          | Pass      |
+| Incorrect answer           | When an incorrect answer is clicked the answer should highlight red with a cross and the correct answer should be highlighted green with a tick | Clicked incorrect answer           | incorrect answer is highlighted red with a cross and the correct answer is highlighted green with a tick | Pass      |
+| Progress bar               | When a question has been answered the progress bar should increment by one                                                                      | Clicked answer box                 | Progress bar is incremented by 1                                                                         | Pass      |
 
 #### Score Page
 
+| Feature                    | Expected Outcome                                                       | Testing Performed                  | Result                                                      | Pass/Fail |
+| -------------------------- | ---------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------- | --------- |
+| The Sites title            | Link directs the user back to the home page                            | Clicked title                      | Home page reloads                                           | Pass      |
+| All buttons - hover effect | All purple buttons should highlight with a blue neon effect background | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass      |
+| Play Again - Button        | Directs the user to the game page                                      | Clicked on button                  | Game page opens to display the questions                    | Pass      |
+
 #### 404 Page
+
+| Feature                    | Expected Outcome                                                       | Testing Performed                  | Result                                                      | Pass/Fail |
+| -------------------------- | ---------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------- | --------- |
+| The Sites title            | Link directs the user back to the home page                            | Clicked title                      | Home page reloads                                           | Pass      |
+| All buttons - hover effect | All purple buttons should highlight with a blue neon effect background | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass      |
+| Take Me Home - Button      | Directs the user to the homepage page                                  | Clicked on button                  | Homepage is displayed                                       | Pass      |
 
 ## Credits
 
 ### Code Used
 
+- I used [w3Schools](https://www.w3schools.com/howto/howto_js_accordion.asp) on how to create an accordion.
+
+- I also used [w3Schools](https://www.w3schools.com/jsref/prop_win_localstorage.asp) on how to store the player's score in local storage in order to see it on a different html page.
+
+- [Stackoverflow](https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript) helped me to figure out how to direct to another html page.
+
+- [CSS-TRICKS](https://css-tricks.com/how-to-create-neon-text-with-css/) helped me to produce the neon effect text and buttons.
+
 ### Media
 
+- The background image was taken from [Pixabay](https://pixabay.com/illustrations/wall-masonry-facade-black-wall-2059909/)
+
 ### Acknowledgments
+
+- My mentor for their guidance and support.
+- My cohort for support.
+- Code Institute for informative course material.
+- The Slack community for help and support.
