@@ -1,5 +1,6 @@
+/* ************************************************************************** Setting the CSS for all pages */
 :root {
-  font-size: 62.5%;
+  font-size: 65%;
 }
 
 * {
@@ -153,12 +154,12 @@ h2 {
 }
 
 .correct {
-  background-color: #4caf50;
+  background-color: #10c716bb;
   color: white;
 }
 
 .incorrect {
-  background-color: #ff5733;
+  background-color: #e6320a;
   color: white;
 }
 

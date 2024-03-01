@@ -1,11 +1,12 @@
+// declaring variables
 const question = document.getElementById("question");
 const answers = [...document.getElementsByClassName("choice-text")];
 const questionCount = [...document.getElementsByClassName("box")];
-let currentQuestion = {};
+let currentQuestion;
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions = [];
+let availableQuestions;
 
 let questions = [
   {
@@ -270,7 +271,7 @@ let questions = [
 
 // the startGame function sets the questionCounter and score to 0.
 function startGame() {
-  // Removes the previous stored score from local storage
+  // Removes the previous stored score from local storage and resets questionCounter and score
   localStorage.removeItem("score");
   questionCounter = 0;
   score = 0;
@@ -283,7 +284,7 @@ function startGame() {
 function newQuestion() {
   if (availableQuestions.length === 0 || questionCounter === 10) {
     // How to redirect to another html page https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
-    return location.assign("/end.html");
+    return location.assign("/score.html");
   }
   questionCounter++;
   setTimeout(() => {
@@ -313,7 +314,7 @@ for (let i = 0; i < answers.length; i++) {
       answers[i].parentElement.classList.add("correct");
       answers[i].nextElementSibling.classList.add("correct-icon");
       score++;
-      //Stores the score in local storage to allow end.html to access and show the final score.
+      //Stores the score in local storage to allow score.html to access and show the final score.
       localStorage.setItem("score", score);
     } else {
       answers[i].parentElement.classList.add("incorrect");
