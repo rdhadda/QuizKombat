@@ -154,12 +154,12 @@ h2 {
 }
 
 .correct {
-  background-color: #10c716bb;
+  background-color: #78bc61;
   color: white;
 }
 
 .incorrect {
-  background-color: #e6320a;
+  background-color: #d53b20;
   color: white;
 }
 
