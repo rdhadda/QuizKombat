@@ -40,6 +40,7 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 - [Testing](#Testing)
   - [W3C Validator](#W3C-Validator)
+  - [JavaScript Validator](#JavaScript-Validator)
   - [Solved Bugs](#Solved-Bugs)
   - [Known Bugs](#Known-Bugs)
   - [Testing User Stories](#Testing-User-Stories)
@@ -79,6 +80,10 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 I opted for an arcade style theme with neon light effects. The colour pallete was created using the [coolors](https://coolors.co/) website.
 
+For the correct and incorrect classed I chose the following colour pallete.
+
+![QuizKombat](documentation/correct_incorrect.png)
+
 ### Typography
 
 Google Fonts was used for the following fonts:
@@ -96,11 +101,11 @@ All images on the webpage were taken from Pixabay. I have credited these in the 
 
 Wireframes were created for mobile, tablet and desktop using Balsamiq.
 
-[Desktop Wireframes](docs/desktop-wireframe.png)
+[Desktop Wireframes](documentation/desktop-wireframe.png)
 
-[Tablet Wireframes](docs/tablet-wireframe.png)
+[Tablet Wireframes](documentation/tablet-wireframe.png)
 
-[Mobile Wireframes](docs/mobile-wireframe.png)
+[Mobile Wireframes](documentation/mobile-wireframe.png)
 
 ### Features
 
@@ -155,6 +160,7 @@ I've taken care when coding to make the website as player-friendly and as access
 - Selecting a sans-serif font which is suitable for users with dyslexia.
 - Ensuring that the site has an adequate amount of colour contrast.
 - Displaying symbols for correct/incorrect answers.
+  ![cross and tick](documentation/cross-tick.png)
 
 ## Technologies Used
 
@@ -233,7 +239,7 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 - [Index Page HTML](docs/w3-index.png)
 - [Game Page HTML](docs/w3-game.png)
-- [Score Page HTML](docs/w3-end.png)
+- [Score Page HTML](docs/w3-score.png)
 - [404 Page HTML](docs/w3-404.png)
 - [style.css CSS](docs/w3-css.png)
 
@@ -243,19 +249,21 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 - [script.js](documentation/jshint-script.js.png)
 - [game.js](documentation/jshint-game.js.png)
-- [end.js](documentation/jshint-end.js.png)
+- [score.js](documentation/jshint-score.js.png)
 
 ### Solved Bugs
 
-1. After the player has completed the quiz, I wanted the user's final score to be displayed on the end.html page. I tried to replace the inner text of the p tag with the id of final-score-number. However, the score wasn't being displayed. After a little research, I came across the localStorage property on w3 schools. This then allowed me to save the user's score in local storage to use on the end.html page. After doing this I realised that the score remained in local storage. In order to remove this from local storage and reset each time the game is restarted I used the localStorage.remove() property in the startGame function.
+1. After the player has completed the quiz, I wanted the user's final score to be displayed on the score.html page. I tried to replace the inner text of the p tag with the id of final-score-number. However, the score wasn't being displayed. After a little research, I came across the localStorage property on w3 schools. This then allowed me to save the user's score in local storage to use on the score.html page. After doing this I realised that the score remained in local storage. In order to remove this from local storage and reset each time the game is restarted I used the localStorage.remove() property in the startGame function.
 
-2. After the game has ended I wanted the player to be redirected to the end.html page to view their final score. However, I wasn't too sure how to accomplish this. Again with a little bit of research I found a solution on stackoverflow which is location.assign("/end.html"). This allowed me to direct the player to the end.html page to view their final score.
+2. After the game has ended I wanted the player to be redirected to the score.html page to view their final score. However, I wasn't too sure how to accomplish this. Again with a little bit of research I found a solution on stackoverflow which is location.assign("/score.html"). This allowed me to direct the player to the score.html page to view their final score.
 
-3. I wanted to highlight the correct answer to the player if they had chosen the incorrect one. At first I tried to add the correct class to the currentQuestion.answer, but this failed to work. After thinking this through I realised, I needed to use a loop to iterate through the currentQuestions array in order to apply the correct class to the correct answer.
+3. I wanted to highlight the correct answer to the player if they had chosen the incorrect one. At first I tried to add the correct class to the currentQuestion.answer if the user selected the incorrect answer. This failed to work. After thinking this through I realised, I needed to use a loop to iterate through the currentQuestions array in order to apply the correct class to the correct answer.
+
+4. When testing for responsiveness I discovered the brickwall background image wasnt appearing on the whole screen and there were white spaces. I intially had the background image set to no-repeat, after I removed no-repeat the image displayed across the whole screen.
 
 ### Known Bugs
 
-1. Occasionally, once the player has finished the game, their score isn't displayed on the end.html page.
+1. Occasionally, once the player has finished the game, their score isn't displayed on the score.html page.
 
 ### Testing User Stories
 
@@ -285,9 +293,9 @@ I took the opportunity to utilize Lighthouse within Chrome Developer Tools. This
 
 ![Lighthouse game.html Desktop](documentation/lighthouse-game.html.png)
 
-#### End.html Desktop Page
+#### Score.html Desktop Page
 
-![Lighthouse end.html Desktop](documentation/lighthouse-end.html.png)
+![Lighthouse end.html Desktop](documentation/lighthouse-score.html.png)
 
 #### 404.html Desktop Page
 
@@ -303,9 +311,9 @@ I took the opportunity to utilize Lighthouse within Chrome Developer Tools. This
 
 ![Lighthouse game.html Mobile](documentation/lighthouse-mobile-game.html.png)
 
-#### End.html Page
+#### Score.html Page
 
-![Lighthouse end.html Mobile](documentation/lighthouse-mobile-end.html.png)
+![Lighthouse end.html Mobile](documentation/lighthouse-mobile-score.html.png)
 
 #### 404.html Page
 
