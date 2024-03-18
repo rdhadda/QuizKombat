@@ -56,6 +56,8 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 ## User Experience (UX)
 
+QuizKombat is an interactive website that is designed to test the general knowledge of a player and provide feedback based on their answer.
+
 ### User Stories
 
 #### First Time Visitor Goals
@@ -78,9 +80,9 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 ![QuizKombat](documentation/colour-scheme.png)
 
-I opted for an arcade style theme with neon light effects. The colour pallete was created using the [coolors](https://coolors.co/) website.
+My choice was an arcade theme complete with neon light effects. I think this adds a retro feel to the website. The [coolors](https://coolors.co/) website was used to develop the colour palette.
 
-For the correct and incorrect classed I chose the following colour pallete.
+For the correct and incorrect classes I chose the following colour pallete.
 
 ![QuizKombat](documentation/correct_incorrect.png)
 
@@ -114,6 +116,7 @@ The website consists of four pages. A home page, games page, score page and 404 
 #### All four pages have the following elements in common:
 
 - The title of the webpage QuizKombat. The title also acts as a link back to the homepage.
+- All of the webpages have the same brickwall background image to have a consistent theme throughout.
 
 #### Home Page
 
@@ -129,11 +132,11 @@ The website consists of four pages. A home page, games page, score page and 404 
 - A progress bar to indicate to the player which question they're on.
 - A question and four answer choices. Upon selecting the correct answer the answer will be highlighted green and their score will be incremented, if the incorrect answer is selected the choice will be highlighted red and the correct answer will be highlighted green.
 
-![Home Page](documentation/gamepage.png)
+![Game Page](documentation/gamepage.png)
 
 #### Scores Page
 
-- Once the player has answered 10 questions they will be taken through to the scores page will display their final score.
+- Once the player has answered 10 questions they will be taken through to the scores page which will display their final score and a message based upon their score.
 - A button to replay the game.
 
 ![Score Page](documentation/scorepage.png)
@@ -142,13 +145,13 @@ The website consists of four pages. A home page, games page, score page and 404 
 
 - The website title QuizKombat
 - An error message.
-- A button directing the player back to the homepage.
+- A button re-directing the player back to the homepage.
 
-![Score Page](documentation/404page.png)
+![404 Page](documentation/404page.png)
 
 #### Future Implementations
 
-- Allowing the player to select the difficulty level of the questions asked.
+- Allowing the player to select the difficulty level of the questions being asked.
 - Allow the player to select the amount of questions to be asked.
 
 ### Accessibility
@@ -229,7 +232,7 @@ To clone the QuizKombat repository:
 
 ## Testing
 
-Testing was continuous throughout the website build. I used Chrome developer tools to identify and address any issues as they arose.
+Testing was continuous throughout the website build. I used Chrome developer tools to identify and address any issues as they arose. I also used console.log() throughout the JavaScript build to determine whether I was receiving the correct output from my functions and variables.
 
 ## Automated Testing
 
@@ -253,17 +256,17 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 ### Solved Bugs
 
-1. After the player has completed the quiz, I wanted the user's final score to be displayed on the score.html page. I tried to replace the inner text of the p tag with the id of final-score-number. However, the score wasn't being displayed. After a little research, I came across the localStorage property on w3 schools. This then allowed me to save the user's score in local storage to use on the score.html page. After doing this I realised that the score remained in local storage. In order to remove this from local storage and reset each time the game is restarted I used the localStorage.remove() property in the startGame function.
+1. After the player has completed the quiz, I wanted the user's final score to be displayed on the score.html page. I tried to replace the inner text of the p tag with the id of final-score-number. However, the score wasn't being displayed. After a little research, I came across the localStorage property on w3 schools. This then allowed me to save the user's score in local storage to use on the score.html page. After doing this I realised that the score remained in local storage. To remove this from local storage and reset each time the game is restarted I used the localStorage.remove() property in the startGame function.
 
 2. After the game has ended I wanted the player to be redirected to the score.html page to view their final score. However, I wasn't too sure how to accomplish this. Again with a little bit of research I found a solution on stackoverflow which is location.assign("/score.html"). This allowed me to direct the player to the score.html page to view their final score.
 
-3. I wanted to highlight the correct answer to the player if they had chosen the incorrect one. At first I tried to add the correct class to the currentQuestion.answer if the user selected the incorrect answer. This failed to work. After thinking this through I realised, I needed to use a loop to iterate through the currentQuestions array in order to apply the correct class to the correct answer.
+3. I wanted to highlight the correct answer to the player if they had chosen the incorrect one. At first I tried to add the correct class to the currentQuestion.answer if the user selected the incorrect answer. This failed to work. After thinking this through I realised, I needed to use a loop to iterate through the currentQuestions and select the correct answer in the array to apply the correct class.
 
-4. When testing for responsiveness I discovered the brickwall background image wasnt appearing on the whole screen and there were white spaces. I intially had the background image set to no-repeat, after I removed no-repeat the image displayed across the whole screen.
+4. When testing for responsiveness I discovered the brick wall background image wasn't appearing on the whole screen and there were white spaces. I initially had the background image set to no-repeat, after I removed no-repeat the image displayed across the whole screen.
 
 ### Known Bugs
 
-1. Occasionally, once the player has finished the game, their score isn't displayed on the score.html page.
+1. Occasionally, once the player has finished the game, their score isn't displayed on the score.html page. I'm not quite sure as to why this happening. I'm hoping to resolve this once my knowledge increases throughout the course.
 
 ### Testing User Stories
 
@@ -387,9 +390,9 @@ Each device tested the site using the following browsers:
 
 - I used [w3Schools](https://www.w3schools.com/howto/howto_js_accordion.asp) on how to create an accordion.
 
-- I also used [w3Schools](https://www.w3schools.com/jsref/prop_win_localstorage.asp) on how to store the player's score in local storage in order to see it on a different html page.
+- I also used [w3Schools](https://www.w3schools.com/jsref/prop_win_localstorage.asp) on how to store the player's score in local storage to see it on a different html page.
 
-- [Stackoverflow](https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript) helped me to figure out how to direct to another html page.
+- [Stackoverflow](https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript) helped me to solve how to direct to another html page.
 
 - [CSS-TRICKS](https://css-tricks.com/how-to-create-neon-text-with-css/) helped me to produce the neon effect text and buttons.
 
