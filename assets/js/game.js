@@ -284,7 +284,7 @@ function startGame() {
 function newQuestion() {
   if (availableQuestions.length === 0 || questionCounter === 10) {
     // How to redirect to another html page https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
-    return location.assign("/score.html");
+    return location.assign("https://rdhadda.github.io/QuizKombat/score.html");
   }
   questionCounter++;
   setTimeout(() => {
