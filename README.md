@@ -2,7 +2,7 @@
 
 QuizKombat is designed to test your general knowledge through 10 different questions. Quizzes are a great way to learn, enhance your memory and add a sprinkle of fun and entertainment to your brain workout!
 
-![QuizKombat. Screenshot of website](docs/am-i-responsive.png)
+![QuizKombat. Screenshot of website](documentation/am-i-responsive.png)
 
 [View Quizkombat on GitHub Pages](https://rdhadda.github.io/QuizKombat/index.html)
 
@@ -264,6 +264,8 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 4. When testing for responsiveness I discovered the brick wall background image wasn't appearing on the whole screen and there were white spaces. I initially had the background image set to no-repeat, after I removed no-repeat the image displayed across the whole screen.
 
+5. Upon deploying QuizKombat to github pages, the redirection to score.html wasn't working properly. I altered the redirection address to "https://rdhadda.github.io/QuizKombat/score.html" rather than "/score.html" and the redirection issue was resolved.
+
 ### Known Bugs
 
 1. Occasionally, once the player has finished the game, their score isn't displayed on the score.html page. I'm not quite sure as to why this happening. I'm hoping to resolve this once my knowledge increases throughout the course.
@@ -323,6 +325,8 @@ I took the opportunity to utilize Lighthouse within Chrome Developer Tools. This
 ![Lighthouse 404.html Mobile](documentation/lighthouse-mobile-404.html.png)
 
 ### Wave Testing
+
+When first running the wave tests on QuizKombat there were various contrast errors appearing. The reason for this was the background colour of the body was defaulted to white. After changing the background colour of the body to black and re-running the wave tests all contrast errors were gone.
 
 - [Index Page HTML](docs/wave-index.png)
 - [Packages Page HTML](docs/wave-packages.png)
