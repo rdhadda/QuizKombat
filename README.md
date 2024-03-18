@@ -328,10 +328,10 @@ I took the opportunity to utilize Lighthouse within Chrome Developer Tools. This
 
 When first running the wave tests on QuizKombat there were various contrast errors appearing. The reason for this was the background colour of the body was defaulted to white. After changing the background colour of the body to black and re-running the wave tests all contrast errors were gone.
 
-- [Index Page HTML](docs/wave-index.png)
-- [Packages Page HTML](docs/wave-packages.png)
-- [Gallery Page HTML](docs/wave-gallery.png)
-- [404 Page HTML](docs/wave-404.png)
+- [Index Page HTML](documentation/wave-index.html.png)
+- [Game Page HTML](documentation/wave.game.html.png)
+- [Score Page HTML](documentation/wave-score.html.png)
+- [404 Page HTML](documentation/wave-404.html.png)
 
 ### Full Testing
 
