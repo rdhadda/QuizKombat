@@ -297,23 +297,7 @@ for (let i = 0; i < answers.length; i++) {
     if (!acceptingAnswers) return;
     // acceptingAnswers is set to false, if the player tries to click on another answer the code will exit.
     acceptingAnswers = false;
-    const selectedAnswer = answers[i].innerText;
-    // Logic to determine whether the player has selected the correct answer and apply appropriate classes.
-    if (selectedAnswer === currentQuestion.answer) {
-      answers[i].parentElement.classList.add("correct");
-      answers[i].nextElementSibling.classList.add("correct-icon");
-      score++;
-      //Stores the score in local storage to allow score.html to access and show the final score.
-      localStorage.setItem("score", score);
-    } else {
-      answers[i].parentElement.classList.add("incorrect");
-      answers[i].nextElementSibling.classList.add("incorrect-icon");
-      for (let j = 0; j < answers.length; j++) {
-        if (answers[j].innerText === currentQuestion.answer) {
-          answers[j].parentElement.classList.add("correct");
-        }
-      }
-    }
+    correctOrIncorrect();
     removeClasses();
   });
 }
@@ -351,6 +335,27 @@ function removeClasses() {
     }
     newQuestion();
   }, 1500);
+}
+
+//function to determine if the player is correct or incorrect
+function correctOrIncorrect() {
+  const selectedAnswer = answers[i].innerText;
+  // Logic to determine whether the player has selected the correct answer and apply appropriate classes.
+  if (selectedAnswer === currentQuestion.answer) {
+    answers[i].parentElement.classList.add("correct");
+    answers[i].nextElementSibling.classList.add("correct-icon");
+    score++;
+    //Stores the score in local storage to allow score.html to access and show the final score.
+    localStorage.setItem("score", score);
+  } else {
+    answers[i].parentElement.classList.add("incorrect");
+    answers[i].nextElementSibling.classList.add("incorrect-icon");
+    for (let j = 0; j < answers.length; j++) {
+      if (answers[j].innerText === currentQuestion.answer) {
+        answers[j].parentElement.classList.add("correct");
+      }
+    }
+  }
 }
 
 startGame();
