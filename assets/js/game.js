@@ -288,15 +288,7 @@ function newQuestion() {
   }
   questionCounter++;
   progressCounter();
-  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-  currentQuestion = availableQuestions[questionIndex];
-  question.innerText = currentQuestion.question;
-  // for loop to iterate through each choice and assign the currentQuestion choice index.
-  answers.forEach((answerElement, index) => {
-    answerElement.innerText = currentQuestion[`choice${index + 1}`];
-  });
-  //removes the question which has just been displayed out of the array so it can't be used again.
-  availableQuestions.splice(questionIndex, 1);
+  fetchingQuestions();
   acceptingAnswers = true;
 }
 
@@ -342,6 +334,19 @@ function progressCounter() {
   setTimeout(() => {
     questionCount[questionCounter - 1].classList.add("progress-counter");
   }, 500);
+}
+
+// fetching a question and choices function
+function fetchingQuestions() {
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  question.innerText = currentQuestion.question;
+  // for loop to iterate through each choice and assign the currentQuestion choice index.
+  answers.forEach((answerElement, index) => {
+    answerElement.innerText = currentQuestion[`choice${index + 1}`];
+  });
+  //removes the question which has just been displayed out of the array so it can't be used again.
+  availableQuestions.splice(questionIndex, 1);
 }
 
 startGame();
