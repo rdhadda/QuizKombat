@@ -314,17 +314,7 @@ for (let i = 0; i < answers.length; i++) {
         }
       }
     }
-    // setTimeout function to remove classes once they have been applied.
-    setTimeout(() => {
-      answers[i].parentElement.classList.remove("correct");
-      answers[i].parentElement.classList.remove("incorrect");
-      for (let j = 0; j < answers.length; j++) {
-        if (answers[j].innerText === currentQuestion.answer) {
-          answers[j].parentElement.classList.remove("correct");
-        }
-      }
-      newQuestion();
-    }, 1500);
+    removeClasses();
   });
 }
 
@@ -347,6 +337,20 @@ function fetchingQuestions() {
   });
   //removes the question which has just been displayed out of the array so it can't be used again.
   availableQuestions.splice(questionIndex, 1);
+}
+
+//function to remove classes
+function removeClasses() {
+  setTimeout(() => {
+    answers[i].parentElement.classList.remove("correct");
+    answers[i].parentElement.classList.remove("incorrect");
+    for (let j = 0; j < answers.length; j++) {
+      if (answers[j].innerText === currentQuestion.answer) {
+        answers[j].parentElement.classList.remove("correct");
+      }
+    }
+    newQuestion();
+  }, 1500);
 }
 
 startGame();
