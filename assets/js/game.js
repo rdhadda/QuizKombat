@@ -289,6 +289,7 @@ function newQuestion() {
   progressCounter();
   fetchingQuestions();
   acceptingAnswers = true;
+  playersSelection();
 }
 
 // For loop with an event listener attached to determine which answer the user has selected.
@@ -298,8 +299,8 @@ function playersSelection() {
       if (!acceptingAnswers) return;
       // acceptingAnswers is set to false, if the player tries to click on another answer the code will exit.
       acceptingAnswers = false;
-      correctOrIncorrect();
-      removeClasses();
+      correctOrIncorrect(i);
+      removeClasses(i);
     });
   }
 }
@@ -326,7 +327,7 @@ function fetchingQuestions() {
 }
 
 //function to remove classes
-function removeClasses() {
+function removeClasses(i) {
   setTimeout(() => {
     answers[i].parentElement.classList.remove("correct");
     answers[i].parentElement.classList.remove("incorrect");
@@ -340,7 +341,7 @@ function removeClasses() {
 }
 
 //function to determine if the player is correct or incorrect
-function correctOrIncorrect() {
+function correctOrIncorrect(i) {
   const selectedAnswer = answers[i].innerText;
   // Logic to determine whether the player has selected the correct answer and apply appropriate classes.
   if (selectedAnswer === currentQuestion.answer) {
