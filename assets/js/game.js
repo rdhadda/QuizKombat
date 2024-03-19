@@ -292,14 +292,16 @@ function newQuestion() {
 }
 
 // For loop with an event listener attached to determine which answer the user has selected.
-for (let i = 0; i < answers.length; i++) {
-  answers[i].addEventListener("click", () => {
-    if (!acceptingAnswers) return;
-    // acceptingAnswers is set to false, if the player tries to click on another answer the code will exit.
-    acceptingAnswers = false;
-    correctOrIncorrect();
-    removeClasses();
-  });
+function playersSelection() {
+  for (let i = 0; i < answers.length; i++) {
+    answers[i].addEventListener("click", () => {
+      if (!acceptingAnswers) return;
+      // acceptingAnswers is set to false, if the player tries to click on another answer the code will exit.
+      acceptingAnswers = false;
+      correctOrIncorrect();
+      removeClasses();
+    });
+  }
 }
 
 // function to increment the progress bar
