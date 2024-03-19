@@ -286,7 +286,6 @@ function newQuestion() {
     // How to redirect to another html page https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
     return location.assign("https://rdhadda.github.io/QuizKombat/score.html");
   }
-  questionCounter++;
   progressCounter();
   fetchingQuestions();
   acceptingAnswers = true;
@@ -331,6 +330,7 @@ for (let i = 0; i < answers.length; i++) {
 
 // function to increment the progress bar
 function progressCounter() {
+  questionCounter++;
   setTimeout(() => {
     questionCount[questionCounter - 1].classList.add("progress-counter");
   }, 500);
