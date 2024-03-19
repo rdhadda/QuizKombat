@@ -287,9 +287,7 @@ function newQuestion() {
     return location.assign("https://rdhadda.github.io/QuizKombat/score.html");
   }
   questionCounter++;
-  setTimeout(() => {
-    questionCount[questionCounter - 1].classList.add("progress-counter");
-  }, 500);
+  progressCounter();
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -337,6 +335,13 @@ for (let i = 0; i < answers.length; i++) {
       newQuestion();
     }, 1500);
   });
+}
+
+// function to increment the progress bar
+function progressCounter() {
+  setTimeout(() => {
+    questionCount[questionCounter - 1].classList.add("progress-counter");
+  }, 500);
 }
 
 startGame();
