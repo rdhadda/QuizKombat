@@ -141,6 +141,7 @@ body {
 
 input[type="text"]:focus {
   outline: none;
+  background-color: transparent;
 }
 
 .name-container button {
