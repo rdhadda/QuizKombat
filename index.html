@@ -28,7 +28,20 @@
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <a href="index.html" class="neon-text-blue">QuizKombat</a>
-        <a class="neon-button neon-text-pink" href="game.html">Start Game</a>
+        <div class="name-container neon-button no-margin">
+          <input
+            id="name"
+            type="text"
+            class="neon-text-pink no-margin text-align-center"
+            placeholder="Enter Your Name"
+          />
+        </div>
+        <a
+          id="startGame"
+          class="neon-button neon-text-pink disabled"
+          href="game.html"
+          >Start Game</a
+        >
         <!-- Html for accordion -->
         <button class="accordion neon-button neon-text-pink">
           How To Play
@@ -40,23 +53,6 @@
             the question by clicking on the answer you think is correct.<br />
             Good Luck!
           </p>
-        </div>
-        <!-- <div class="no-margin">
-          <input
-            id="name"
-            type="text"
-            class="neon-text-pink neon-button no-margin text-align-center"
-            placeholder="Enter Your Name"
-          />                  
-        </div> -->
-        <div class="name-container neon-button no-margin">
-          <input
-            id="name"
-            type="text"
-            class="neon-text-pink no-margin text-align-center"
-            placeholder="Enter Your Name"
-          />
-          <button class="neon-text-pink text-size" id="submit">Submit</button>
         </div>
       </div>
     </div>
