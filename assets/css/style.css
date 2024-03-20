@@ -132,6 +132,7 @@ body {
 
 .name-container {
   display: flex;
+  flex-direction: column;
 }
 
 .name-container input {
@@ -153,6 +154,11 @@ input[type="text"]:focus {
 
 .text-size.neon-text-pink {
   font-size: medium;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* ****************************************************************************Game.html CSS */
