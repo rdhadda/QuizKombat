@@ -43,6 +43,10 @@ body {
   align-items: center;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .container a {
   margin-bottom: 10px;
 }
@@ -110,6 +114,44 @@ body {
 .neon-button:hover {
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #5271ff,
     0 0 0.8rem #5271ff, 0 0 2.8rem #5271ff, inset 0 0 1.3rem #5271ff;
+}
+
+.neon-text-pink::placeholder {
+  text-decoration: none;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-family: "Anta", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
+    0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+}
+
+.no-margin.neon-button {
+  margin-top: 0;
+}
+
+.name-container {
+  display: flex;
+}
+
+.name-container input {
+  background-color: transparent;
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.name-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.text-size.neon-text-pink {
+  font-size: medium;
 }
 
 /* ****************************************************************************Game.html CSS */
