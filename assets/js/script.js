@@ -1,14 +1,22 @@
 // script for how to play accordion
 var accordion = document.querySelector(".accordion");
-const submit = document.getElementById("submit");
 
 accordion.addEventListener("click", function () {
   var panel = this.nextElementSibling;
   panel.classList.toggle("expanded");
 });
 
-submit.addEventListener("click", () => {
-  var nameInput = document.getElementById("name").value;
-  localStorage.setItem("name", nameInput);
-  console.log(nameInput);
+// Event listener to determine whether the player has entered their name or not
+const nameInput = document.getElementById("name");
+const startGame = document.getElementById("startGame");
+
+nameInput.addEventListener("input", () => {
+  if (nameInput.value !== "") {
+    startGame.classList.remove("disabled");
+    var playerNameInput = document.getElementById("name").value;
+    localStorage.setItem("name", playerNameInput);
+    console.log(playerNameInput);
+  } else {
+    alert("Please Enter Your Name");
+  }
 });
