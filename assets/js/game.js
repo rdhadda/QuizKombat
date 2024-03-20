@@ -272,6 +272,7 @@ let questions = [
 // the startGame function sets the questionCounter and score to 0.
 function startGame() {
   // Removes the previous stored score from local storage and resets questionCounter and score
+  localStorage.removeItem("name");
   localStorage.removeItem("score");
   questionCounter = 0;
   score = 0;
@@ -334,6 +335,7 @@ function removeClasses(i) {
     for (let j = 0; j < answers.length; j++) {
       if (answers[j].innerText === currentQuestion.answer) {
         answers[j].parentElement.classList.remove("correct");
+        answers[j].nextElementSibling.classList.remove("correct-icon");
       }
     }
     newQuestion();
@@ -356,6 +358,7 @@ function correctOrIncorrect(i) {
     for (let j = 0; j < answers.length; j++) {
       if (answers[j].innerText === currentQuestion.answer) {
         answers[j].parentElement.classList.add("correct");
+        answers[j].nextElementSibling.classList.add("correct-icon");
       }
     }
   }
