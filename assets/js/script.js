@@ -8,11 +8,11 @@ accordion.addEventListener("click", function () {
 
 // Event listener to determine whether the player has entered their name or not
 const nameInput = document.getElementById("name");
-const startGame = document.getElementById("startGame");
+const startGameButton = document.getElementById("startGameButton");
 
 nameInput.addEventListener("input", () => {
   if (nameInput.value !== "") {
-    startGame.classList.remove("disabled");
+    startGameButton.classList.remove("disabled");
     var playerNameInput = document.getElementById("name").value;
     localStorage.setItem("name", playerNameInput);
     console.log(playerNameInput);
