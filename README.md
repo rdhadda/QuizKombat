@@ -56,7 +56,7 @@ QuizKombat is designed to test your general knowledge through 10 different quest
 
 ## User Experience (UX)
 
-QuizKombat is an interactive website that is designed to test the general knowledge of a player and provide feedback based on their answer.
+QuizKombat is an interactive website that is designed to test the general knowledge of a player and provide personalized feedback based on their answer.
 
 ### User Stories
 
@@ -64,15 +64,18 @@ QuizKombat is an interactive website that is designed to test the general knowle
 
 - I want to be able to play quiz online.
 - I want to be able to navigate through the website with ease.
+- I want to be able to enter my name.
 - I want the website to be responsive across varying devices.
 
 #### Returning Visitor Goals
 
 - I want a variety of questions across different subjects.
+- I want to be able to select the difficulty of the questions being asked.
 
 #### Frequent Visitor Goals
 
 - I want a variety of questions across different subjects.
+- I want to be able to select the difficulty of the questions being asked.
 
 ## Design
 
@@ -121,14 +124,16 @@ The website consists of four pages. A home page, games page, score page and 404 
 #### Home Page
 
 - The website title QuizKombat appears on the homepage.
-- An accordian with playing instructions that explains how to play the game.
-- A button that says "start game," enabling the player to begin playing.
+- An input box for the player to enter their name.
+- An accordion with playing instructions that explains how to play the game.
+- A button that says "start game," enabling the player to begin playing once their name has been entered.
 
 ![Home Page](documentation/homepage.png)
 
 #### Games Page
 
 - The website title QuizKombat.
+- Three buttons, for the player to select the difficulty of the questions asked. The questions will be only displayed once the difficulty level has been selected. Once the difficulty has been selected, the difficulty buttons become unclickable.
 - A progress bar to indicate to the player which question they're on.
 - A question and four answer choices. Upon selecting the correct answer the answer will be highlighted green and their score will be incremented, if the incorrect answer is selected the choice will be highlighted red and the correct answer will be highlighted green.
 
@@ -136,7 +141,7 @@ The website consists of four pages. A home page, games page, score page and 404 
 
 #### Scores Page
 
-- Once the player has answered 10 questions they will be taken through to the scores page which will display their final score and a message based upon their score.
+- Once the player has answered 10 questions they will be taken through to the scores page which will display their final score, name and a message based upon their score.
 - A button to replay the game.
 
 ![Score Page](documentation/scorepage.png)
@@ -151,7 +156,7 @@ The website consists of four pages. A home page, games page, score page and 404 
 
 #### Future Implementations
 
-- Allowing the player to select the difficulty level of the questions being asked.
+- Use an API to display the questions and answer selections.
 - Allow the player to select the amount of questions to be asked.
 
 ### Accessibility
@@ -265,6 +270,8 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 4. When testing for responsiveness I discovered the brick wall background image wasn't appearing on the whole screen and there were white spaces. I initially had the background image set to no-repeat, after I removed no-repeat the image displayed across the whole screen.
 
 5. Upon deploying QuizKombat to github pages, the redirection to score.html wasn't working properly. I altered the redirection address to "https://rdhadda.github.io/QuizKombat/score.html" rather than "/score.html" and the redirection issue was resolved.
+
+6. When implementing the different difficulty levels of the quiz, I initially had the difficulty buttons on index.html. I then used a spread operator to declare an array for the buttons and used an event listener on game.js to see which difficulty level was clicked to determine which set of questions to ask. However, when console logging the variable to the console the array was empty. Rather than placing the difficulty buttons on index.html I placed them on game.html, I went through the same process and my variable and event listener was now working.
 
 ### Known Bugs
 
