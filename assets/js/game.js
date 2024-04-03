@@ -37,7 +37,6 @@ function selectDifficulty() {
 // the startGame function sets the questionCounter and score to 0.
 function startGame() {
   // Removes the previous stored score from local storage and resets questionCounter and score
-  localStorage.removeItem("name");
   localStorage.removeItem("score");
   questionCounter = 0;
   score = 0;
