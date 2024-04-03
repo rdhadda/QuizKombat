@@ -11,11 +11,12 @@ const nameInput = document.getElementById("name");
 const startGameButton = document.getElementById("startGameButton");
 
 nameInput.addEventListener("input", () => {
+  localStorage.removeItem("name");
   if (nameInput.value !== "") {
     startGameButton.classList.remove("disabled");
     var playerNameInput = document.getElementById("name").value;
     localStorage.setItem("name", playerNameInput);
-    console.log(playerNameInput);
+    console.log(localStorage.getItem("name"));
   } else {
     alert("Please Enter Your Name");
   }
