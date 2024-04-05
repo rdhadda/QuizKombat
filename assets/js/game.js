@@ -7,7 +7,6 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions;
-
 const playerDifficultySelection = [
   ...document.getElementsByClassName("gameDifficulty"),
 ];
@@ -15,23 +14,28 @@ const playerDifficultySelection = [
 // function with an event listener to determine which difficulty the player has selected
 function selectDifficulty() {
   for (let i = 0; i < playerDifficultySelection.length; i++) {
-    playerDifficultySelection[i].addEventListener("click", function () {
-      if (this.id === "easy") {
-        // Set the easy questions set
-        availableQuestions = [...easyQuestions];
-      } else if (this.id === "medium") {
-        // Set the medium questions set
-        availableQuestions = [...mediumQuestions];
-      } else if (this.id === "hard") {
-        // Set the hard questions set
-        availableQuestions = [...hardQuestions];
-      }
-      // Disable all difficulty buttons once a selection has been made
-      disableButtons(playerDifficultySelection);
-      // Call the startGame function to initialize the game
-      startGame();
-    });
+    playerDifficultySelection[i].addEventListener(
+      "click",
+      handleDifficultySelection
+    );
   }
+}
+
+function handleDifficultySelection() {
+  if (this.id === "easy") {
+    // Set the easy questions set
+    availableQuestions = [...easyQuestions];
+  } else if (this.id === "medium") {
+    // Set the medium questions set
+    availableQuestions = [...mediumQuestions];
+  } else if (this.id === "hard") {
+    // Set the hard questions set
+    availableQuestions = [...hardQuestions];
+  }
+  // Disable all difficulty buttons once a selection has been made
+  disableButtons(playerDifficultySelection);
+  // Call the startGame function to initialize the game
+  startGame();
 }
 
 // the startGame function sets the questionCounter and score to 0.
@@ -55,17 +59,17 @@ function newQuestion() {
   playersSelection();
 }
 
-// For loop with an event listener attached to determine which answer the user has selected.
+// forEach loop with an event listener attached to determine which answer the user has selected.
 function playersSelection() {
-  for (let i = 0; i < answers.length; i++) {
-    answers[i].addEventListener("click", () => {
+  answers.forEach(function (answer, i) {
+    answer.addEventListener("click", function () {
       if (!acceptingAnswers) return;
       // acceptingAnswers is set to false, if the player tries to click on another answer the code will exit.
       acceptingAnswers = false;
       correctOrIncorrect(i);
       removeClasses(i);
     });
-  }
+  });
 }
 
 // function to increment the progress bar
@@ -126,6 +130,7 @@ function correctOrIncorrect(i) {
   }
 }
 
+// function to disable buttons
 function disableButtons(buttons) {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].classList.add("disabled");
