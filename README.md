@@ -258,6 +258,7 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 - [script.js](documentation/jshint-script.js.png)
 - [game.js](documentation/jshint-game.js.png)
 - [score.js](documentation/jshint-score.js.png)
+- [questions.js](documentation/jshint-questions.js.png)
 
 ### Solved Bugs
 
@@ -285,13 +286,15 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 | :----------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
 | I want to be able to play quiz online.                       | QuizKombat is a web-based quiz, which accessible across desktop, tablet and mobile devices.                                    |
 | I want to be able to navigate through the website with ease. | The website uses a series of buttons to allow the player to easily navigate the website. ![buttons](documentation/buttons.png) |
+| I want to be able to enter my name.                          | There is an input field on the home page which allows the user to enter their name.                                            |
 | I want the website to be responsive across varying devices.  | Media queries have been used in order to make QuizKombat responsive.                                                           |
 
 #### Returning Visitors and Frequent Visitors
 
-| Goals                                                    | How are they achieved?                                                                     |
-| :------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
-| I want a variety of questions across different subjects. | There are a variety of questions which are randomly selected each time the game is played. |
+| Goals                                                                    | How are they achieved?                                                                                                                                                              |
+| :----------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| I want a variety of questions across different subjects.                 | There are a variety of questions which are randomly selected each time the game is played.                                                                                          |
+| I want to be able to select the difficulty of the questions being asked. | On the game page of QuizKombat, the player is presented with three difficulty level buttons. Once selected the questions being asked will be determined on the difficulty selected. |
 
 ### Lighthouse Testing
 
@@ -363,6 +366,7 @@ Each device tested the site using the following browsers:
 | Feature                    | Expected Outcome                                                       | Testing Performed                  | Result                                                      | Pass/Fail |
 | -------------------------- | ---------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------- | --------- |
 | The Sites title            | Link directs the user back to the home page                            | Clicked title                      | Home page reloads                                           | Pass      |
+| Enter Your Name Input      | Allows Player to Enter their name                                      | Entered name                       | Name is displayed                                           | Pass      |
 | Start Game                 | Directs the user to the game page                                      | Clicked on button                  | Game page opens to display the questions                    | Pass      |
 | How to play button         | Opens the accordion with the instructions on how to play the game      | Clicked on button                  | accordion with instructions on how to play opens            | Pass      |
 | All buttons - hover effect | All purple buttons should highlight with a blue neon effect background | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass      |
@@ -372,6 +376,9 @@ Each device tested the site using the following browsers:
 | Feature                    | Expected Outcome                                                                                                                                | Testing Performed                  | Result                                                                                                   | Pass/Fail |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------- | --------- |
 | The Sites title            | Link directs the user back to the home page                                                                                                     | Clicked title                      | Home page reloads                                                                                        | Pass      |
+| Easy Button                | Easy questions are displayed                                                                                                                    | Click easy button                  | Easy questions are displayed                                                                             | Pass      |
+| Medium Button              | Medium questions are displayed                                                                                                                  | Click easy button                  | Medium questions are displayed                                                                           | Pass      |
+| Hard Button                | Hard questions are displayed                                                                                                                    | Click easy button                  | Hard questions are displayed                                                                             | Pass      |
 | All buttons - hover effect | All purple buttons should highlight with a blue neon effect background                                                                          | Hover over each button on the page | Each button displayed the correct styling when hovered over                                              | Pass      |
 | Question populated         | The question from available questions array is correctly pulled from game.js                                                                    | started a new game                 | The question is displaying                                                                               | Pass      |
 | Answers populated          | The answers from available questions array is correctly pulled from game.js                                                                     | started a new game                 | The question is displaying                                                                               | Pass      |
