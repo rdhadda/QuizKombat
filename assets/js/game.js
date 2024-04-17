@@ -10,9 +10,13 @@ let availableQuestions;
 const playerDifficultySelection = [
   ...document.getElementsByClassName("gameDifficulty"),
 ];
+const choiceContainer = [
+  ...document.getElementsByClassName("choice-container"),
+];
 
 // function with an event listener to determine which difficulty the player has selected
 function selectDifficulty() {
+  disableButtons(choiceContainer);
   for (let i = 0; i < playerDifficultySelection.length; i++) {
     playerDifficultySelection[i].addEventListener(
       "click",
@@ -34,6 +38,7 @@ function handleDifficultySelection() {
   }
   // Disable all difficulty buttons once a selection has been made
   disableButtons(playerDifficultySelection);
+  enableButtons(choiceContainer);
   // Call the startGame function to initialize the game
   startGame();
 }
@@ -134,6 +139,13 @@ function correctOrIncorrect(i) {
 function disableButtons(buttons) {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].classList.add("disabled");
+  }
+}
+
+// function to enable buttons
+function enableButtons(button) {
+  for (let i = 0; i < button.length; i++) {
+    button[i].classList.remove("disabled");
   }
 }
 
