@@ -25,6 +25,7 @@ function selectDifficulty() {
   }
 }
 
+// function to handle the players difficulty selection
 function handleDifficultySelection() {
   if (this.id === "easy") {
     // Set the easy questions set
@@ -55,7 +56,7 @@ function startGame() {
 // newQuestion function will randomly select a question and answer choices from the variable currentQuestions.
 function newQuestion() {
   if (availableQuestions.length === 0 || questionCounter === 10) {
-    // How to redirect to another html page https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
+    // How to redirect to another html page taken from https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
     return location.assign("https://rdhadda.github.io/QuizKombat/score.html");
   }
   progressCounter();
@@ -149,4 +150,5 @@ function enableButtons(button) {
   }
 }
 
+// calling the select difficulty function when game.html first loads
 selectDifficulty();

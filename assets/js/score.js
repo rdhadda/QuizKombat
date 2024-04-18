@@ -4,7 +4,7 @@ const finalScoreText = document.getElementById("final-score-text");
 const score = parseInt(localStorage.getItem("score")) || 0;
 let playerName = localStorage.getItem("name");
 
-// If statement to give a phrase depending on player's outcome
+// If statement to give a phrase depending on player's score
 if (score <= 3) {
   finalScoreText.innerHTML = `Keep trying ${playerName}, you'll get better!`;
   finalScore.innerText = `${score}`;
