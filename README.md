@@ -278,6 +278,8 @@ W3C validator was used to validate the HTML on all pages of the website. It was 
 
 1. Occasionally, once the player has finished the game, their score isn't displayed on the score.html page. I'm not quite sure as to why this happening. I'm hoping to resolve this once my knowledge increases throughout the course.
 
+2. When playing QuizKombat on a touch device the hover state remains on the button. This isn't removed until the next button is selected.
+
 ### Testing User Stories
 
 #### First Time Visitors
