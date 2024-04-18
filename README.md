@@ -119,13 +119,13 @@ The website consists of four pages. A home page, games page, score page and 404 
 #### All four pages have the following elements in common:
 
 - The title of the webpage QuizKombat. The title also acts as a link back to the homepage.
-- All of the webpages have the same brickwall background image to have a consistent theme throughout.
+- All of the web pages have the same brick wall background image to have a consistent theme throughout.
 
 #### Home Page
 
 - The website title QuizKombat appears on the homepage.
-- An input box for the player to enter their name.
-- An accordion with playing instructions that explains how to play the game.
+- An input box for the player to enter their name. This is used later on for the score page.
+- An accordion with playing instructions which explains how to play the game.
 - A button that says "start game," enabling the player to begin playing once their name has been entered.
 
 ![Home Page](documentation/homepage.png)
@@ -133,7 +133,7 @@ The website consists of four pages. A home page, games page, score page and 404 
 #### Games Page
 
 - The website title QuizKombat.
-- Three buttons, for the player to select the difficulty of the questions asked. The questions will be only displayed once the difficulty level has been selected. Once the difficulty has been selected, the difficulty buttons become unclickable.
+- Three buttons, for the player to select the difficulty of the questions asked. The questions will be only displayed once the difficulty level has been selected. Once the difficulty has been selected, the difficulty buttons become un-clickable and the answer choices which are initially disabled will become available to click.
 - A progress bar to indicate to the player which question they're on.
 - A question and four answer choices. Upon selecting the correct answer the answer will be highlighted green and their score will be incremented, if the incorrect answer is selected the choice will be highlighted red and the correct answer will be highlighted green.
 
@@ -148,7 +148,7 @@ The website consists of four pages. A home page, games page, score page and 404 
 
 #### 404 Error Page
 
-- The website title QuizKombat
+- The website title, QuizKombat
 - An error message.
 - A button re-directing the player back to the homepage.
 
