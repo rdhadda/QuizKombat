@@ -259,6 +259,8 @@ Please see [TESTING.md](TESTING.md) file for both automated and manual testing.
 
 1. Occasionally, once the player has finished the game, their score isn't displayed on the score.html page. I'm not quite sure as to why this happening. I'm hoping to resolve this once my knowledge increases throughout the course.
 
+![Score Not Showing](documentation/score-not-showing.png)
+
 2. When playing QuizKombat on a touch device the hover state remains on the button. This isn't removed until the next button is selected.
 
 3. On the homepage, when the player enters their name via autofill the styling is overridden by the browser's default styling.
