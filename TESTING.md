@@ -101,7 +101,7 @@ When first running the wave tests on QuizKombat there were various contrast erro
 | I want to be able to play quiz online.                       | QuizKombat is a web-based quiz, which accessible across desktop, tablet and mobile devices.                                    |
 | I want to be able to navigate through the website with ease. | The website uses a series of buttons to allow the player to easily navigate the website. ![buttons](documentation/buttons.png) |
 | I want to be able to enter my name.                          | There is an input field on the home page which allows the user to enter their name.                                            |
-| I want the website to be responsive across varying devices.  | Media queries have been used in order to make QuizKombat responsive.                                                           |
+| I want the website to be responsive across varying devices.  | Media queries have been used in order to make QuizKombat responsive accross a variety of devices.                              |
 
 #### Returning Visitors and Frequent Visitors
 
